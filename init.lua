@@ -1,4 +1,10 @@
 
+--my keymaps
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "ql" , "<Esc>A")
+vim.keymap.set("i", "jl" , "<Esc>o")
+vim.keymap.set("i", "kl" , "<Esc>O")
+
 --clone for lazy.nvim package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -14,11 +20,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
+
+--calling vim-settings.lua file which holds my basic vim settings
 require("vim-settings")
 --calling setup for lazy.nvim package manager
 require("lazy").setup("plugins")
-
-
-
 
 
