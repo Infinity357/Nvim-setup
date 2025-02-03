@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "a",
+        "lspconfig"
+    ],
+    "diagnostics.disable": [
+        "newfield-call"
+    ]
+}

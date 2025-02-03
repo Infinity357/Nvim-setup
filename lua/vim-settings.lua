@@ -33,7 +33,7 @@ vim.opt.signcolumn = "yes"         -- Ensures a fixed column on the left
 --vim.opt.foldcolumn = "1"           -- Adds 2 extra columns on the left (adjust as needed)
 vim.opt.scrolloff = 3              --Adds 3 extra lines on top of code as padding
 -- Set the width of the line number column (adds space between line number and text)
-vim.opt.numberwidth = 10        -- Increase this number to add more space between line number and broder
+vim.opt.numberwidth = 7        -- Increase this number to add more space between line number and broder
 
 -- Match ColorColumn background to make it blend in
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = 0, bg = "#2E3440" })
