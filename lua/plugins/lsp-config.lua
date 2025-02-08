@@ -23,12 +23,16 @@ return{
     config = function()
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup({})
+      --for snippits from lsp
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 
       --to automatically setup lsp when downloading from Mason
       require('mason-lspconfig').setup_handlers({
         function(server)
-          lspconfig[server].setup({})
+          lspconfig[server].setup({
+            capabilities = capabilities
+          })
         end
       })
 

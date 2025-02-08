@@ -8,6 +8,8 @@ return
       vim.keymap.set('n', '<leader>E',':Fern %:h -<CR>')
       --map <leader>ef to open it hilighting the current file
       vim.keymap.set('n', '<leader>ef',':Fern . -reveal=%<CR>')
+      --map <leader>ef to open it hilighting the current file in drawer mode
+      vim.keymap.set('n', '<leader>edf',':Fern . -drawer -reveal=%<CR>')
       --map <leader>e to close the biffer
       vim.keymap.set('n', '<leader>e', ':bd<CR>')
 
