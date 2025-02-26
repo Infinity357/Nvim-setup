@@ -1,9 +1,5 @@
-
---my keymaps
-vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("i", "ql" , "<Esc>A")
-vim.keymap.set("i", "jl" , "<Esc>o")
-vim.keymap.set("i", "kl" , "<Esc>O")
+require("vim-settings")
+require("core.keymaps")
 
 --clone for lazy.nvim package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -51,13 +47,14 @@ vim.api.nvim_create_user_command("StopLiveServer", function()
 end, {})
 
 --disable auto-close (for auto closing brackets) in telescope
-vim.cmd([[
-  autocmd FileType TelescopePrompt let b:AutoPairs = 0
-]])
+--vim.cmd([[
+--  autocmd FileType TelescopePrompt let b:AutoPairs = 0
+--]])
 
+--for splashscreen color
+vim.o.termguicolors = true
 
 --calling vim-settings.lua file which holds my basic vim settings
-require("vim-settings")
 --calling setup for lazy.nvim package manager
 require("lazy").setup("plugins")
 
