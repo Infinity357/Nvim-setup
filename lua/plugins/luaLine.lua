@@ -37,7 +37,8 @@ return{
 
 require('lualine').setup {
   options = {
-    theme = custom_theme,
+ --   theme = custom_theme,
+      theme = palenight,
     section_separators = {'', ''},
     component_separators = {'', ''},
   }
